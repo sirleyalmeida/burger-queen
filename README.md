@@ -1,5 +1,7 @@
 # Burger Queen
 
+Uma aplicação de restaurante que recebe pedidos dos clientes no salão, ao confirmar vai para cozinha e depois retorna para o salão quando pronto. 
+
 ## Índice
 
 * [1. Preâmbulo](#1-preâmbulo)
@@ -14,28 +16,24 @@
 
 ## 1. Preâmbulo
 
-[React](https://reactjs.org/) _bibliotecas_ de
-JavaScript 
+Nesse projeto foram utilizados:
+* [React](https://reactjs.org/) uma_biblioteca_ de
+JavaScript;
+* react-with-firebase-auth;
+* @fortawesome/react-fontawesome;
+* react-bootstrap.
 
-
-
-
-Como desenvolvedora Front-end, estes kits de desenvolvimento podem resultar em
-uma grande ajuda para implementar rapidamente _features_ dos projetos em que
-você for trabalhar.
+Para desenvolver em Front-end, estes kits de desenvolvimento podem resultar em
+uma grande ajuda para implementar rapidamente _features_ do projeto.
 
 ## 2. Resumo do projeto
 
-Desta vez temos um projeto 100% por demanda. Você sempre pode (e deve) fazer
-sugestões de melhora e mudança, mas muitas vezes trabalhará em um projeto em que
-primeiro deve se assegurar de cumprir os requisitos.
-
-Um pequeno restaurante de hambúrgueres, que está crescendo, necessita uma
+Este projeto foi 100% por demanda.
+Um pequeno restaurante de hambúrgueres, que está crescendo, necessitou de uma
 interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
 para a cozinha para que sejam preparados de forma ordenada e eficiente (através
 de um _backend_ que os detalhes serão dados mais adiante).
 
-![burger-queen]()
 
 Estas são as informações que temos do cliente:
 
@@ -83,45 +81,11 @@ adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
  
 ## 4. Considerações gerais
 
-Este projeto é individual.
+Este projeto foi individual.
 
-Trabalhe integralmente uma história de usuário antes de passar para a próxima. Cumpra todas as histórias possíveis dentro do tempo especificado.
+A lógica do projeto foi totalmente implementada em JavaScript (ES6 +), HTML e CSS e empacotada de forma automatizada. Neste projeto você deve usar [React](https://reactjs.org/).
 
-A lógica do projeto deve ser totalmente implementada em JavaScript (ES6 +), HTML e CSS e empacotada de forma automatizada. Neste projeto você deve usar [React](https://reactjs.org/).
-
-O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo Web que seja **responsivo** e possa funcionar **offline**.
-
-Precisamos pensar bem sobre o UX para aqueles que vão receber os pedidos, o tamanho e a aparência dos botões, a visibilidade do estado atual do pedido, etc.
-
-O aplicativo deve usar scripts `npm-scripts` e ter` start`, ` build` e `deploy`, que são responsáveis por iniciar, empacotar e implantar o aplicativo, respectivamente.
-
-Este projeto inclui um _boilerplate_ com o código necessário para começar. A parte de back-end já foi resolvida. O _boilerplate_ inclui os seguintes arquivos/pastas com configurações do Firebase(hosting, firestore e functions):
-
-```text
-./04-burger-queen/
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
-└── README.md
-```
-
-A parte da interface não está incluída, então, você deve definir a estrutura das
-pastas e arquivos que considera necessários. Você pode estruturá-los de acordo
-com as convenções do React. Portanto, os _setups_ necessários para
-executá-los serão feitos por você.
-
-Para iniciar este projeto você terá que fazer um _fork_ e _clone_ deste repositório.
-
-## 5. Critérios mínimos de aceitação do projeto
-
-### Definição do produto
-
-O [_Product Owner_](https://www.youtube.com/watch?v=7lhnYbmovb4) nos apresentou
-este _backlog_ que é o resultado do seu trabalho com o cliente até hoje
-***
+O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo Web que seja **responsivo**.
 
 #### [História de usuário 1] Usuário deve ter seu perfil (login/senha) para acessar o sistema.
 
@@ -136,15 +100,6 @@ O que deve acontecer para satisfazer as necessidades do usuário?
 * Criar tipo de usuário (cozinha / salão).
 * Entrar na tela correta para cada usuário.
 
-##### Definição de pronto
-
-O acordado abaixo deve acontecer para dizer que a história está terminada:
-
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
-
-***
 
 #### [História de usuário 2] Garçom/Garçonete deve ser capaz de anotar o pedido do cliente
 
@@ -164,16 +119,6 @@ O que deve acontecer para satisfazer as necessidades do usuário?
 * Enviar o pedido para a cozinha (guardar em algum banco de dados).
 * Funcionar bem e se adequar a um _tablet_.
 
-##### Definição de pronto
-
-O acordado abaixo deve acontecer para dizer que a história está terminada:
-
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
-
-***
-
 #### [História de usuário 3] Chefe de cozinha deve ver os pedidos
 
 Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder marcar que estão prontos e poder notificar os garçons/garçonetes que o pedido está pronto para ser entregue ao cliente.
@@ -184,14 +129,6 @@ Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder marca
 * Marcar os pedidos que foram preparados e estão prontos para serem servidos.
 * Ver o tempo que levou para preparar o pedido desde que chegou, até ser marcado como concluído.
 
-##### Definição de pronto
-
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
-
-***
-
 #### [História de usuário 4] Garçom/Garçonete deve ver os pedidos prontos para servir
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los rapidamente aos clientes.
@@ -200,17 +137,6 @@ Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá
 
 * Ver a lista de pedidos prontos para servir.
 * Marque os pedidos que foram entregues.
-
-##### Definição de pronto
-
-* Você deve ter recebido _code review_ de pelo menos uma parceira.
-* Você fez _testes_ de usabilidade e incorporou o _feedback_ do usuário.
-* Você deu deploy de seu aplicativo e marcou sua versão (tag git).
-* Os dados devem ser mantidos intactos, mesmo depois que um pedido terminado. Tudo isso para poder ter estatísticas no futuro.
-
-***
-
-
 
 ## Checklist
 

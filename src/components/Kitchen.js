@@ -20,7 +20,6 @@ class Kitchen extends React.Component {
       created: "",
       request: [],
       seconds: 0,
-      // start: Date.now()
     };
   }
 
@@ -46,66 +45,24 @@ class Kitchen extends React.Component {
       .get()
       .then((querySnapshot) => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log(data)
         this.setState({
           request: data,
           seconds: 0,
         });
       })
-      .then(response => {
-
-
-        // const actualDate = Date.now(response);
-        // console.log(actualDate)
-        // const secondsActualDate = Math.round((actualDate / 1000 / 60 / 60) * 100) / 100;
-        // console.log(secondsActualDate)
-        // const DateSubmitBuy = this.timePreparing(this.state.created)
-        // console.log(DateSubmitBuy)
-        // const sumDate = secondsActualDate - DateSubmitBuy
-        // console.log(sumDate)
-
-        // const date = new Date(sumDate)
-        // const hh = date.toString(sumDate)
-        // console.log(hh)
-
-        // this.interval = setInterval(() => this.tick(), 1000);
+      .then(() => {
+        this.interval = setInterval(() => this.tick(), 1000);
       });
-
-    // this.interval = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
   }
 
-  // componentDidMount(snapshot) {
-  //   database.collection("request")
-  //     .where("status", ">=", "awaiting")
-  //     .where("status", "<=", "preparing")
-  //     .orderBy("status")
-  //     .orderBy("startOrder")
-  //     .get()
-  //     .then(querySnapshot => {
-  //       const data = querySnapshot.docs.map(doc => doc.data());
-  //     }
-  // }
-  timePreparing = (created) => {
-    // const countTime = this.state.start - created
-    // console.log(countTime)
 
-    // const date = new Date();
-    // const year = date.getFullYear();
-    // const month = date.getMonth();
-    // const day = date.getDate();
+  timePreparing = (created) => {
     const time = Date(created).split(' ')[4];
     return time
-    // return `${day}/${month}/${year} - ${time}`;
-
-
-    // const date = new Date(countTime)
-    // return date.toString()
-
-    // return Math.round((created / 1000 / 60 / 60) * 100) / 100;
   }
 
   timeDoneKitchen = () => {
@@ -122,13 +79,9 @@ class Kitchen extends React.Component {
       });
   }
 
-
-
   render(props) {
     const requestList = this.state.request;
 
-
-    console.log(requestList)
     return (
       <Container fluid>
         <div className="div-header-kitchen">

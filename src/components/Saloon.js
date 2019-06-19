@@ -88,7 +88,6 @@ class Saloon extends React.Component {
         attendant: this.state.name,
         createdTime: this.timeConfirmBuy(),
         timeDone: "",
-        // created: Date.now()
       }
       database.collection("request").add(object)
       this.setState({
