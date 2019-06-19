@@ -14,22 +14,11 @@
 
 ## 1. Preâmbulo
 
-[React](https://reactjs.org/), [Angular](https://angular.io/) e
-[Vue](https://vuejs.org/) são alguns dos _frameworks_ e _bibliotecas_ de
-JavaScript mais usados na área de desenvolvimento ao redor do mundo e existe uma
-razão para isso. No contexto do navegador, [_manter a interface sincronizada com
-o estado é difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
+[React](https://reactjs.org/) _bibliotecas_ de
+JavaScript 
 
-Ao eleger um _framework_ ou _biblioteca_ para nossa interface, nos apoiamos em
-uma série de convenções e implementações _testadas_ e _documentadas_ para
-resolver um problema comum a toda interface web. Isto nos permite concentrar
-melhor (dedicar mais tempo) nas características _específicas_ de nossa
-aplicação.
 
-Quando escolhemos uma destas tecnologias não só importamos um pedaço de código
-para reusar (o qual já é um grande valor por si só), mas também adotamos uma
-**arquitetura**, uma série de **princípios de design**, um paradigma, algumas
-**abstrações**, um **vocabulário**, uma **comunidade**, etc...
+
 
 Como desenvolvedora Front-end, estes kits de desenvolvimento podem resultar em
 uma grande ajuda para implementar rapidamente _features_ dos projetos em que
@@ -46,7 +35,7 @@ interface em que se possa realizar pedidos utilizando um _tablet_, e enviá-los
 para a cozinha para que sejam preparados de forma ordenada e eficiente (através
 de um _backend_ que os detalhes serão dados mais adiante).
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+![burger-queen]()
 
 Estas são as informações que temos do cliente:
 
@@ -91,16 +80,6 @@ Estas são as informações que temos do cliente:
 A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
 um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
 adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
-
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
-
-## 3. Objetivos de aprendizagem
-
-O objetivo principal é aprender a construir uma interface web usando React. Esse framework front-end ataca o seguinte problema: **como manter a interface e estado sincronizados**. Portanto, esta experiência espera familiarizá-la com o conceito de estado da tela, e como cada mudança no estado vai refletir na interface (por exemplo, toda vez que adicionamos um _produto_ para um _pedido_, a interface deve atualizar a lista de pedidos e o total). A interface deve ser projetada especificamente para rodar em **tablets**.
-
-Como objetivo **SECUNDÁRIO**, você deve seguir as recomendações para PWAs (_Progressive Web Apps_), que inclui conceitos como **offline**. Para orientá-las sobre este tema,recomendamos que você use [Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es), que é uma ferramenta do Google que nos ajuda a garantir que nossos aplicativos web sigam "boas práticas".
-
-Tópicos: _react_, _pwa_, _offline-first_, _service-worker_.
  
 ## 4. Considerações gerais
 
@@ -231,111 +210,7 @@ Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá
 
 ***
 
-## 6. Dicas e leituras complementares
 
-### Primeros passos
-
-1. O primeiro passo deste projeto deve ser converter o menu descrito pelo cliente em uma estrutura JSON para mais tarde _printar_ na tela.
-
-2. Faça um _fork_ deste repositório (no GitHub).
-
-3. Clone seu _fork_ no seu computador:
-
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
-
-4. Crie uma branch da `master` para começar a trabalhar. Por exemplo:
-
-   ```sh
-   git checkout -b develop
-   ```
-
-5. Crie um projeto no [Firebase](https://firebase.google.com/)
-
-6. Habilite o Firestore (_começar em modo bloqueado_) nas "Bases de Dados" de [Firebase console](https://console.firebase.google.com/).
-
-7. Instale o utilitário de linha de comando do Firebase:
-
-   ```sh
-   npm i -g firebase-tools
-   ```
-
-8. Adicione o ambiente de produção para fazer o deploy:
-
-   ```sh
-   firebase use --add
-   ```
-
-9. Instale dependências de cloud functions:
-
-   ```sh
-   # usando yarn
-   cd functions && yarn && cd ..
-   # alternativamente, usando npm
-   cd functions && npm install && cd ..
-   ```
-
-10. Rode o comando: `firebase deploy`
-
-11. Neste ponto, você pode começar com o _front-end_ :wink:
-
-***
-
-Nota para a utilização do `create-react-app`:
-
-Se você tentar usar o `create-react-app` no diretório do projeto, você receberá
-um erro dizendo que há arquivos que podem apresentar um conflito. Para evitar
-esse problema você pode criar um novo aplicativo usando `create-react-app` e a
-partir daí _ junte com a pasta do projeto:
-
-```sh
-# se estava na pasta do projeto, fomos para a pasta acima
-cd ..
-
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
-
-### Outros recursos
-
-#### Frameworks / bibliotecas
-
-* [React](https://reactjs.org/)
-
-#### Ferramentas
-
-* [npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [Babel](https://babeljs.io/)
-* [webpack](https://webpack.js.org/)
-
-#### PWA
-
-* [Seu primeiro Progressive Web App - Google
-  developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-* [Progressive Web Apps -
-  codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-* [offlinefirst.org](http://offlinefirst.org/)
-* [Usando Service Workers -
-  MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-* [Como habilitar dados sem conexão - Firebase
-  Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-#### Serverless
-
-* [Serverless Framework 1.0 - Pagar.me Talks](https://www.youtube.com/watch?v=2oNovfw3V08)
-* [Firebase](https://firebase.google.com/)
-* [Serverless Architectures - Martin
-  Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-#### Cloud functions
-
-* [Cloud functions - Firebase
-  Docs](https://firebase.google.com/docs/functions/?hl=es-419)
 
 ## Checklist
 
