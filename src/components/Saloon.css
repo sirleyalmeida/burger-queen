@@ -1,42 +1,26 @@
-.div-header {
-padding: 0%;
-}
-
-.container {
-  width: auto;
+.container-saloon {
+  padding: 0%;
 }
 
 .div-header-saloon {
   padding: 5px;
   width: 100%;
-  height: 10vh;
+  height: 23vh;
   display: inline-flex;
   justify-content: space-around;
 }
 
 .div-logo-saloon {
-  width: 30%;
-  height: 10vh;
+  width: 40%;
+  height: auto;
   display: inline-flex;
   justify-content: left;
 }
 
 .logo-saloon {
-  width: 70%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   margin: 0;
-}
-
-.client-name-input {
-  width: 40%;
-  height: auto;
-  padding-top: 4rem;
-  align-items: center;
-}
-
-.form-client-name {
-  height: auto;
-  display: inline-flex;
 }
 
 .btn-client-name {
@@ -44,7 +28,7 @@ padding: 0%;
 }
 
 .div-user-name {
-  width: 10%;
+  width: 30%;
   height: auto;
   text-align: right;
 }
@@ -52,7 +36,7 @@ padding: 0%;
 .user-name-icon{
   width: 30%;
   height: auto;
-  padding-top: 1rem;
+  padding-top: 4rem;
   font-size: 20px;
 }
 
@@ -65,7 +49,7 @@ padding: 0%;
 }
 
 .logout-icon {
- margin-top: 1em;
+ margin-top: 2em;
 }
 
 .out {
@@ -125,4 +109,17 @@ padding: 0%;
 .btn-col {
   text-align: center;
   margin-top: 10px;
+}
+
+.client-name-input {
+  width: 100%;
+  height: auto;
+  padding-top: 6rem;
+  margin-left: 3rem; 
+  align-items: center;
+}
+
+.form-client-name {
+  height: auto;
+  display: inline-flex;
 }

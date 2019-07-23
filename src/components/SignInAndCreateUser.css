@@ -9,11 +9,10 @@
 }
 
 .logo {
-  height: 10vh;
+  height: 20vh;
 }
 
 .div-logo {
-  padding: 10px 25px;
   text-align: center;
 }
 
@@ -38,7 +37,7 @@
 }
 
 label.form-check-label {
-  /* padding: 2px; */
+  padding: 1px 0;
   font-size: 20px;
   color: #E3E9F0;
 }

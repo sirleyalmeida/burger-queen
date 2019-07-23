@@ -125,24 +125,12 @@ class Saloon extends React.Component {
     }, 0);
 
     return (
-      <div className="div-header">
-        <Container>
+      <div>
+        <Container className="container-saloon">
           <Col xs={6} md={6} lg={12} >
             <div className="div-header-saloon">
               <div className="div-logo-saloon">
                 <img src={logoBurgerQueen} className="logo-saloon" alt="logo do Burger Queen, coroa acima do nome" />
-              </div>
-              <div className="client-name-input">
-                <Form>
-                  <Row>
-                    <Col sm={8}>
-                      <Form.Group as={Col} className="form-client-name" controlId="formHorizontalName">
-                        <Form.Control ref="client" type="text" placeholder="Nome do Cliente" value={this.state.client}
-                          onChange={(event) => this.saveClient(event, "client")} />
-                      </Form.Group>
-                    </Col>
-                  </Row>
-                </Form>
               </div>
               <div className="div-user-name">
                 <FontAwesomeIcon icon={faUserCircle} className="user-name-icon" />
@@ -218,7 +206,7 @@ class Saloon extends React.Component {
                                     </ListGroup.Item>
                                   </Col>
                                   <Col sm={4}>
-                                    <ListGroup.Item>{product.price}</ListGroup.Item>
+                                    <ListGroup.Item>R$ {product.price.toFixed(2)}</ListGroup.Item>
                                   </Col>
                                 </Row>
                               </ListGroup>
@@ -259,6 +247,18 @@ class Saloon extends React.Component {
                 </Tabs>
               </div>
               <div className="list-itens">
+                <div className="client-name-input">
+                  <Form>
+                    <Row>
+                      <Col sm={10}>
+                        <Form.Group as={Col} className="form-client-name" controlId="formHorizontalName">
+                          <Form.Control ref="client" type="text" placeholder="Nome do Cliente" value={this.state.client}
+                            onChange={(event) => this.saveClient(event, "client")} />
+                        </Form.Group>
+                      </Col>
+                    </Row>
+                  </Form>
+                </div>
                 <ListGroup>
                   <ListGroup.Item className="header-item-checked" disabled>Pedido(s)</ListGroup.Item>
                 </ListGroup>
@@ -269,7 +269,7 @@ class Saloon extends React.Component {
                         <ListGroup.Item key={index} ><FontAwesomeIcon
                           icon={faMinusCircle}
                           onClick={() => this.productDelete(product)}
-                        />{product.quantity} - {product.name} - {product.price * product.quantity}</ListGroup.Item>
+                        />{product.quantity} - {product.name} - R$ {product.price.toFixed(2) * product.quantity}</ListGroup.Item>
                       </ListGroup>
                     }
                   })

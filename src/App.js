@@ -3,9 +3,7 @@ import './App.css';
 import SignInAndCreateUser from './components/SignInAndCreateUser';
 import Saloon from './components/Saloon';
 import Kitchen from './components/Kitchen';
-import { BrowserRouter as Router, Route, Redirect, Link } from 'react-router-dom';
-
-import RedirectTo from './components/RedirectTo';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,8 +11,9 @@ function App() {
       <div className="App">
         <Route path="/" exact component={SignInAndCreateUser} />
         <Route path="/saloon/:id" component={Saloon} />
-        {/* <Route path="/saloon" component={RedirectTo} /> */}
+        <Redirect path="/saloon" component={SignInAndCreateUser} />
         <Route path="/kitchen/:id" component={Kitchen} />
+        <Redirect path="/kitchen" component={SignInAndCreateUser} />
       </div>
     </Router>
   );

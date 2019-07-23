@@ -55,6 +55,20 @@ class Kitchen extends React.Component {
       });
   }
 
+  orderDone() {
+    database.collection("request")
+      .update({
+        timeDone: this.timeDoneKitchen()
+      })
+      .then((querySnapshot) => {
+        const data = querySnapshot.docs.map(doc => doc.data());
+        this.setState({
+          request: data,
+          seconds: 0,
+        });
+      })
+  }
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
@@ -89,7 +103,7 @@ class Kitchen extends React.Component {
             <img src={logoBurgerQueen} className="logo-kitchen" alt="logo do Burger Queen, coroa acima do nome" />
           </div>
           <div className="kitchen">
-            <p className="welcome-kitchen">Boas Vindas à Cozinha</p>
+            <p className="welcome-kitchen">Cozinha</p>
           </div>
           <div className="div-user-name">
             <FontAwesomeIcon icon={faUserCircle} className="user-name-icon" />

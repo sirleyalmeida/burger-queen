@@ -3,16 +3,28 @@
 Uma aplicação de restaurante que recebe pedidos dos clientes no salão, ao confirmar vai para cozinha e depois retorna para o salão quando pronto. 
 
 ## Índice
-
+* [Como utilizar](#como-utilizar)
 * [1. Preâmbulo](#1-preâmbulo)
 * [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínima do
-  projeto](#5-critérios-de-aceitação-mínima-do-projeto)
-* [6. Dicas e leituras complementares](#7-dicas-e-leituras-complementares)
+* [3. Considerações gerais](#3-considerações-gerais)
+* [4. Checklist](#4-Checklist)
 
 ***
+
+## Como Utilizar
+
+## Como Utilizar
+
+### Login para Salão
+![Login Salão Exemplo](./src/assets/img-examples/exemplo-login-salao.png)
+### Salão
+![Exemplo Salão](./src/assets/img-examples/exemplo-salao.png)
+### Login para Cozinha
+![Login Cozinha Exemplo](./src/assets/img-examples/exemplo-login-cozinha.png)
+### Cozinha
+![Exemplo Cozinha](./src/assets/img-examples/exemplo-cozinha.png)
+
+
 
 ## 1. Preâmbulo
 
@@ -79,7 +91,7 @@ A interface deve mostrar os dois menus (café da manhã e restante do dia), cada
 um com todos os seus _produtos_. O usuário deve poder escolher que _produtos_
 adicionar e a interface deve mostrar o _resumo do pedido_ com o custo total.
  
-## 4. Considerações gerais
+## 3. Considerações gerais
 
 Este projeto foi individual.
 
@@ -133,62 +145,32 @@ Eu como chefe de cozinha quero ver os pedidos dos clientes em ordem, poder marca
 
 Eu como garçom/garçonete quero ver os pedidos que estão prontos para entregá-los rapidamente aos clientes.
 
-##### Critérios de aceitação
-
-* Ver a lista de pedidos prontos para servir.
-* Marque os pedidos que foram entregues.
-
-## Checklist
-
-### Geral
-
-* [ ] O produto final segue as diretrizes.
-
-### `README.md`
-
-* [ ] Processo de design de documentos.
-* [ ] Inclui informações para desenvolvedores (deps, instalação, uso, implantação, teste,
-   ...)
+## 4. Checklist
 
 #### HU
 
 #### HU 1: Perfil de usuário
 
-* [ ] Criar login e senha.
-* [ ] Criar tipo de usuário (cozinha / salão).
-* [ ] Entrar na tela correta para cada usuário.
+* Criar login e senha.
+* Criar tipo de usuário (cozinha / salão).
+* Entrar na tela correta para cada usuário.
 
 #### HU 2: Anotar pedidos
 
-* [ ] Digite o nome do cliente.
-* [ ] Filtre _menu_ para _café da manhã_ e _almoço/jantar_.
-* [ ] Adicionar item ao pedido.
-* [ ] Excluir item do pedido.
-* [ ] Mostra _resumo_ do pedido com todos os itens e o total.
-* [ ] Enviar para a cozinha (isso deve salvar o pedido).
+* Digite o nome do cliente.
+* Filtre _menu_ para _café da manhã_ e _almoço/jantar_.
+* Adicionar item ao pedido.
+* Excluir item do pedido.
+* Mostra _resumo_ do pedido com todos os itens e o total.
+* Enviar para a cozinha (isso deve salvar o pedido).
 
 #### HU 3: Ver pedidos na cozinha
 
-* [ ] Visualização de pedidos pendentes para produção.
-* [ ] Marcar pedido como como pronto para entrega.
-* [ ] Ver histórico dos pedidos.
+* Visualização de pedidos pendentes para produção.
+* Marcar pedido como como pronto para entrega (roadmap).
+* Ver histórico dos pedidos (roadmap).
 
-#### HU 4: Entrega de pedidos
+#### HU 4: Entrega de pedidos (Roadmap)
 
-* [ ] Visualização de pedidos pendentes para entrega.
-* [ ] Marcar pedido como entregue ao cliente.
-
-### UX
-
-* [ ] É bem e funciona bem em tablets.
-* [ ] Você pode _adicionar a tela inicial_ como um aplicativo da web (ele tem um manifesto,
-  ícones, ...) em iOS e Android.
-* [ ] Fácil utilização em telas sensíveis ao toque (telas sensíveis ao toque).
-* [ ] Status atual do pedido sempre visível enquanto fazemos um pedido.
-
-### Testes (Se quiserem fazer)
-
-* [ ] 70% ou mais em cobertura de _statements_.
-* [ ] 70% ou mais em cobertura de _functions_.
-* [ ] 70% ou mais em cobertura de _lines_.
-* [ ] 70% ou mais em cobertura de _branches_.
+* Visualização de pedidos pendentes para entrega.
+* Marcar pedido como entregue ao cliente.

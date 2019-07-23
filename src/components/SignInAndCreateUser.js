@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './Button';
 import './SignInAndCreateUser.css';
+import Button from './Button';
 import logoBurgerQueen from '../assets/logo-burger-queen.png';
 import firebase from '../firebaseConfig';
 import withFirebaseAuth from 'react-with-firebase-auth';
-import { Form, Row, Col, Container, Tabs, Tab } from 'react-bootstrap';
+import { Col, Container, Form, Tabs, Tab, Row } from 'react-bootstrap';
 
 const firebaseAppAuth = firebase.auth();
 const database = firebase.firestore();
@@ -76,8 +76,8 @@ class SignInAndCreateUser extends React.Component {
             </div>
             <Tabs defaultActiveKey="login" transition={false} id="noanim-tab-example" className="tabs">
               <Tab eventKey="login" title="Login" className="justify-content-md-center nav-link">
-                <Form>
-                  <Form.Group as={Row} className="justify-content-md-center" controlId="formHorizontalEmail">
+                <Form className="justify-content-md-center">
+                  <Form.Group as={Row} controlId="formHorizontalEmail">
                     <Col xs={6} md={6} lg={12} sm={12}>
                       <Form.Control size="lg" type="email" placeholder="Email" value={this.state.email}
                         onChange={(event) => this.handleChange(event, "email")} />

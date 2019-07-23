@@ -6,14 +6,15 @@
 }
 
 .div-logo-kitchen {
-  width: 30%;
-  height: 10vh;
+  width: 40%;
+  height: auto;
   display: inline-flex;
   justify-content: left;
 }
 
 .logo-kitchen {
-  width: 20vw;
+  width: 100%;
+  height: 100%;
   margin: 0;
 }
 
@@ -25,12 +26,14 @@
   align-items: center;
 }
 
-.logo-size {
-  height: 4vh !important;
+.welcome {
+  margin-top: 15px;
 }
 
-.welcome {
-  margin-top: 10px;
+.div-user-name {
+  width: 30%;
+  height: auto;
+  text-align: center;
 }
 
 .list-items-kitchen {
@@ -50,7 +53,3 @@
   padding: 5px;
   margin: 5px;
 }
-
-/* .btn-confirm-kitchen {
- margin-right: 10px;
-} */
